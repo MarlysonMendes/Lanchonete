@@ -1,4 +1,6 @@
 using Lanchonete.Data;
+using Lanchonete.Repositories;
+using Lanchonete.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +14,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(cs);
 });
+
+builder.Services.AddTransient<ILunchRepository, LunchRepository>();
+builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
 
 var app = builder.Build();
 

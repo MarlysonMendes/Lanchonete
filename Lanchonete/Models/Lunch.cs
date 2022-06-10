@@ -7,11 +7,11 @@ namespace Lanchonete.Models
     public class Lunch
     {
         [Key]
-        public int LouchId { get; set; }
+        public int LuchId { get; set; }
         [Display(Name = "Nome")]
         [Required(ErrorMessage = "Informe o nome da categoria")]
         [StringLength(80, MinimumLength = 10, ErrorMessage = "O {0} deve ter no minimo {1} e tamanho máximo é {2}")]
-        public string LouchName { get; set; }
+        public string LuchName { get; set; }
         [Display(Name = "Descrição curta do lanch")]
         [Required(ErrorMessage = "Informe o nome da categoria")]
         [StringLength(200, MinimumLength = 30, ErrorMessage = "O {0} deve ter no minimo {1} e tamanho máximo é {2}")]
