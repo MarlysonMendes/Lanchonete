@@ -1,0 +1,13 @@
+﻿@model LunchListViewModel
+
+<div>
+    <h2>Todos os Lanches</h2>
+</div>
+<div class="container">
+   <div class="row">
+        @foreach(var lunch in Model.Lunches)
+        {
+            <partial name="_LunchesResume" for="@lunch"></partial>
+        }
+    </div>
+</div>
