@@ -1,4 +1,6 @@
 ﻿using Lanchonete.Models;
+using Lanchonete.Repositories.Interfaces;
+using Lanchonete.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,22 +8,23 @@ namespace Lanchonete.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILunchRepository _lunchRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController( ILunchRepository lunchRepository)
         {
-            _logger = logger;
+            _lunchRepository = lunchRepository;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var homeViewModel = new HomeViewModel
+            {
+                FavoriteLunches = _lunchRepository.FavoritesLunches
+            };
+
+            return View(homeViewModel);
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

@@ -5,12 +5,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Lanchonete.Controllers
 {
-    public class CarrinhoCompraController : Controller
+    public class ShoppingCartController : Controller
     {
         private readonly ILunchRepository _lunchRepository;
         private readonly ShoppingCart _shoppingCart;
 
-        public CarrinhoCompraController(ILunchRepository lunchRepository,
+        public ShoppingCartController(ILunchRepository lunchRepository,
             ShoppingCart shoppingCart)
         {
             _lunchRepository = lunchRepository;
@@ -42,10 +42,10 @@ namespace Lanchonete.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult RemoveItemToShoppingCart(int luncheId)
+        public IActionResult RemoveItemToShoppingCart(int lunchId)
         {
             var lunchSelect = _lunchRepository.Lunches
-                                    .FirstOrDefault(p => p.LuchId == luncheId);
+                                    .FirstOrDefault(p => p.LuchId == lunchId);
 
             if (lunchSelect != null)
             {
