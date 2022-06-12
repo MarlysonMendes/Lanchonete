@@ -14,6 +14,8 @@ namespace Lanchonete.Models
 
         public string ShoppingCartId { get; set; }
         public List<ShoppingCartItem> ShoppingCartItems { get; set; }
+
+
         public static ShoppingCart GetShoppingCart(IServiceProvider services)
         {
             //define uma sessão
@@ -82,7 +84,6 @@ namespace Lanchonete.Models
             _context.SaveChanges();
             return AmountLocal;
         }
-
         public List<ShoppingCartItem> GetItensCart()
         {
             return ShoppingCartItems ?? (ShoppingCartItems = _context.ShoppingCartItems

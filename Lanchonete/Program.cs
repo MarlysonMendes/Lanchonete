@@ -1,4 +1,5 @@
 using Lanchonete.Data;
+using Lanchonete.Models;
 using Lanchonete.Repositories;
 using Lanchonete.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +19,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddTransient<ILunchRepository, LunchRepository>();
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddScoped(sp => ShoppingCart.GetShoppingCart(sp));
 builder.Services.AddMemoryCache();
 builder.Services.AddSession();
 
