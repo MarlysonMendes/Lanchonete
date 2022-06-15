@@ -42,5 +42,10 @@ namespace Lanchonete.Controllers
 
             return View(lunchesListViewModel);
         }
+        public IActionResult Details(int lunchId)
+        {
+            var lunch = _lunchRepository.Lunches.FirstOrDefault(l => l.LuchId == lunchId);
+            return View(lunch);
+        }
     }
 }
