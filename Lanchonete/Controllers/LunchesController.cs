@@ -1,4 +1,5 @@
-﻿using Lanchonete.Repositories.Interfaces;
+﻿using Lanchonete.Models;
+using Lanchonete.Repositories.Interfaces;
 using Lanchonete.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,14 +14,33 @@ namespace Lanchonete.Controllers
             _lunchRepository = lunchRepository;
         }
 
-        public IActionResult List()
+        public IActionResult List(string category)
         {
-            //var lunches = _lunchRepository.Lunches;
-            // return View(lunches);
-            var lunchViewModel = new LunchListViewModel();
-            lunchViewModel.Lunches = _lunchRepository.Lunches;
-            lunchViewModel.currentCatgory = "Categoria Atual";
-            return View(lunchViewModel);
+            IEnumerable<Lunch> lanches;
+            string currentCategory = string.Empty;
+
+            if (string.IsNullOrEmpty(category))
+            {
+                lanches = _lunchRepository.Lunches.OrderBy(l => l.LuchId);
+                currentCategory = "Todos os lanches";
+            }
+            else
+            {
+
+                lanches = _lunchRepository.Lunches
+                          .Where(l => l.Category.CategoryName.Equals(category))
+                          .OrderBy(c => c.LuchName);
+
+                currentCategory = category;
+            }
+
+            var lunchesListViewModel = new LunchListViewModel
+            {
+                Lunches = lanches,
+                CurrentCategory = currentCategory
+            };
+
+            return View(lunchesListViewModel);
         }
     }
 }
