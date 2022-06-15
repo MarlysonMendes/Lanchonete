@@ -42,6 +42,11 @@ app.UseSession();
 app.UseAuthorization();
 
 app.MapControllerRoute(
+   name: "categoriaFiltro",
+   pattern: "Lunches/{action}/{category?}",
+   defaults: new { Controller = "Lunches", action = "List" });
+
+app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 

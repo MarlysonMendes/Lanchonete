@@ -15,13 +15,8 @@ namespace Lanchonete.Components
 
         public IViewComponentResult Invoke()
         {
-            //var itens = _shoppingCart.GetItensCart();
-            var itens = new List<ShoppingCartItem>()
-            {
-                new ShoppingCartItem(),
-                new ShoppingCartItem()
+            var itens = _shoppingCart.GetItensCart();
 
-            };
             _shoppingCart.ShoppingCartItems = itens;
 
             var shoppingCartViewModel = new ShoppingCartViewModel
