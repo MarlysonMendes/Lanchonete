@@ -47,5 +47,33 @@ namespace Lanchonete.Controllers
             var lunch = _lunchRepository.Lunches.FirstOrDefault(l => l.LuchId == lunchId);
             return View(lunch);
         }
+
+        public ViewResult Search(string searchString)
+        {
+            IEnumerable<Lunch> lunches;
+            string categoryCurrent = string.Empty;
+
+            if (string.IsNullOrEmpty(searchString))
+            {
+                lunches = _lunchRepository.Lunches.OrderBy(p => p.LuchId);
+                categoryCurrent = "Todos os Lanches";
+            }
+            else
+            {
+                lunches = _lunchRepository.Lunches
+                          .Where(p => p.LuchName.ToLower().Contains(searchString.ToLower()));
+
+                if (lunches.Any())
+                    categoryCurrent = "Lanches";
+                else
+                    categoryCurrent = "Nenhum lanche foi encontrado";
+            }
+
+            return View("~/Views/Lunches/List.cshtml", new LunchListViewModel
+            {
+                Lunches = lunches,
+                CurrentCategory = categoryCurrent
+            });
+        }
     }
 }
