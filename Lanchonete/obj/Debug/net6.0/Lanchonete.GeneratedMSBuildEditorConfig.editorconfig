@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/marly/OneDrive/Área de Trabalho/Projetos .Net/Lanchonete/Lanchonete/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/marly/OneDrive/Área de Trabalho/Projetos .Net/Lanchonete/Lanchonete/Views/Contact/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

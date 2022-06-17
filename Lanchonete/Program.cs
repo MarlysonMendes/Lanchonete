@@ -2,6 +2,7 @@ using Lanchonete.Data;
 using Lanchonete.Models;
 using Lanchonete.Repositories;
 using Lanchonete.Repositories.Interfaces;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +16,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(cs);
 });
+
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders();
 
 builder.Services.AddTransient<ILunchRepository, LunchRepository>();
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
@@ -39,7 +44,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 app.UseSession();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
