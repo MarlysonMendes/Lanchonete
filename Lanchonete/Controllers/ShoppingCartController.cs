@@ -1,6 +1,7 @@
 ﻿using Lanchonete.Models;
 using Lanchonete.Repositories.Interfaces;
 using Lanchonete.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lanchonete.Controllers
@@ -30,6 +31,7 @@ namespace Lanchonete.Controllers
 
             return View(shoppingCartViewModel);
         }
+        [Authorize]
         public IActionResult AddItemToShoppingCart(int lunchId)
         {
             var lunchSelect = _lunchRepository.Lunches
@@ -42,6 +44,7 @@ namespace Lanchonete.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize]
         public IActionResult RemoveItemToShoppingCart(int lunchId)
         {
             var lunchSelect = _lunchRepository.Lunches

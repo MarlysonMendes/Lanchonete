@@ -52,12 +52,7 @@ C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete\bi
 C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete\obj\Debug\net6.0\Lanchonete.csproj.CopyComplete
 C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete\bin\Debug\net6.0\MessagePack.dll
 C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete\bin\Debug\net6.0\MessagePack.Annotations.dll
@@ -266,3 +261,8 @@ C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete\bi
 C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\marly\OneDrive\Área de Trabalho\Projetos .Net\Lanchonete\Lanchonete\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
